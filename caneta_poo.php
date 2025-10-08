@@ -24,8 +24,9 @@ Class Caneta {
         $tampada = 'true';
     }
 
-    //Estado
-    
-
-
 }
+
+//Estado
+$estado->tampada = 'false';
+$estado->rabiscar();
+$estado = new Caneta();
