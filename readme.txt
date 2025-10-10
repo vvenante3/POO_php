@@ -6,3 +6,6 @@ Classe-> Objeto:        1 - Coisas que eu tenho;    (atributo)
 Classe->gerar Objeto : ESTANCIAR
 
 'nome_objeto' = nova(new) 'Classe'
+
+
+$this -> atributo DENTRO de um MÉTODO que está na MESMA classe
