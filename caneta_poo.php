@@ -3,25 +3,23 @@
 Class Caneta {
 
     //Atributos
-    public $modelo;
-    public $cor;
-    public $ponta;
-    public $carga;
-    public $tampada;
+    var $modelo;
+    var $cor;
+    var $ponta;
+    var $carga;
+    var $tampada;
 
     //Métodos
-    public function rabiscar()
-    {
-        if($tampada === 'true'){
-            echo "É necessário destampar a caneta!";
-        } else {
-            echo "rabiscar e escrever";
-        }
+    public function rabiscar() {
+        
     }
 
-    public function tampar()
-    {
-        $tampada = 'true';
+    public function tampar() {
+        
+    }
+
+    public function destampar() {
+
     }
 
 }
