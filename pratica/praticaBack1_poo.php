@@ -19,10 +19,12 @@ Class Games {
     }
 
     public function pegar() {
-        if($this->controle === 'controle'){
-            echo "pegando controle..";
-        } else {
-            echo "preparando teclado e mouse";
+        if($this->requisitos() === true){
+            if($this->controle === 'controle'){
+                echo "pegando controle..";
+            } else {
+                echo "preparando teclado e mouse";
+            }
         }
     }
 
@@ -32,8 +34,10 @@ Class Games {
 
         if($this->valor < $carteira && $this->data_lançamento < $hoje) {
             echo "pode jogar";
+            return true;
         } else {
             echo "não pode jogar";
+            return false;
         }
     }
 }

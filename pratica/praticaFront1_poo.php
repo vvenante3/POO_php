@@ -14,10 +14,9 @@
         $game01->plataforma = "ambos";
         $game01->data_lançamento = DateTime::createFromFormat('d/m/Y', '20/10/2023');
         $game01->valor = 75.50;
+        $game01->controle = "console";
 
-        var_dump($game01);
-
-        $game01->requisitos();
+        $game01->pegar();
 
 
     ?>
