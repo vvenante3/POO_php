@@ -10,23 +10,21 @@
     <?php
         require_once 'caneta4.php';
 
-        $c1 = new Caneta();
+        $c1 = new Caneta("BIC", "Azul", 0.5);
+        $c2 = new Caneta("Faber Castel", "Preta", 0.5);
 
         // altera o conteúdo através da função
-        $c1->setModelo("BIC");
+        // $c1->setModelo("BIC");
         
         // altera o conteúdo diretamente na variável (publico)
-        $c1->modelo = "BIC";
+        // $c1->modelo = "BIC";
 
         // se tentarmos alterar a variavel "Ponta" diretamente, não será possível (private) :: Cannot access private property Caneta
-        $c1->setPonta(0.5);
-        
+        // $c1->setPonta(0.5);
 
         print_r($c1);
+        print_r($c2);
 
-
-
-    
     ?>
     </pre>
 </body>
