@@ -16,96 +16,103 @@ Class ContaBanco{
     public function abrirConta($t)    // Ao abrir terá que escolher entre CC e CP, ao abrir($status = true): se for CC irá ganhar R$50 e CP R$150 
     {
         // Verificar o tipo de conta (CC II CP)
-        $tipo = $t;
+        $this->setTipo($t);
 
         // Definir status(true)
-        $status = true;
+        $this->setStatus(true);
 
-        if($tipo === "CC"){
-            $saldo = 50;
+        if($t === "CC"){
+            $this->setSaldo(50);
         } else {
-            $saldo = 150;
+            $this->setSaldo(150);
         }
         
     }
 
     public function fecharConta()   // Pra fechar conta, não pode ter dinheiro & débito
     {
-        if($saldo > 0){
-            echo "Conta com dinheiro, não é possível fechar a conta.";
-        } else if($saldo < 0){
-            echo "Conta em débito";
+        if($this->getSaldo() > 0){
+            echo "<p>Conta com dinheiro, não é possível fechar a conta.</p>";
+        } else if($this->getSaldo() < 0){
+            echo "<p>Conta em débito</p>";
         } else {
-            $status.setStatus(false);
+            $this->setStatus(false);
         }
 
     }
 
     public function depositar($v)     // só pode depositar se a conta estiver com $stauts = true  
     {
-        if(getStatus() === true){
-            setSaldo(getSaldo() + $v);
+        if($this->getStatus()){
+            $this->setSaldo($this->getSaldo() + $v);
         } else {
-            echo "Impossível depositar";
+            echo "<p>Impossível depositar</p>";
         }
     }
 
     public function sacar($v)         // $status = true && precisa ter saldo
     {
-        if((getStatus() === true) && (getSaldo() > 0)){
-            setSaldo(getSaldo() - $v);
+        if(($this->getStatus()) && ($this->getSaldo() > $v)){
+            $this->setSaldo($this->getSaldo() - $v);
         } else {
-            echo "Impossível sacar";
+            echo "<p>Impossível sacar</p>";
         }
     }
 
     public function pagarMensal()   // CC irá pagar R$12 && CP R$20
     {
-        if(getTipo() == "CC"){
-            setSaldo(getSaldo() - 12);
+        if($this->getTipo() == "CC"){
+            $v = 12;
         } else {
-            setSaldo(getSaldo() - 20);
+            $v = 20;
         }
+
+        if($this->getStatus()){
+            $this->setSaldo($this->getSaldo() - $v);
+        } else {
+            echo "<p>Impossível cobrar mensalidade!</p>";
+        }
+
     }
 
     public function getnumConta() {
         return $this->numConta;
     }
 
-    public function setnumConta($n) {
-        $this->numConta = $n;
+    public function setnumConta($numConta) {
+        $this->numConta = $numConta;
     }
 
     public function getTipo() {
         return $this->tipo;
     }
 
-    public function setTipo($t) {
-        $this->tipo = $t;
+    public function setTipo($tipo) {
+        $this->tipo = $tipo;
     }
 
     public function getDono() {
         return $this->dono;
     }
 
-    public function setDono($d) {
-        $this->dono = $d;
+    public function setDono($dono) {
+        $this->dono = $dono;
     }
 
     public function getSaldo() {
         return $this->saldo;
     }
 
-    public function setSaldo($s) {
-        $this->saldo = $s;
+    public function setSaldo($saldo) {
+        $this->saldo = $saldo;
     }
 
     public function getStatus(){
         return $this->status;
     }
 
-    public function setStatus($s){
-        $this->status = $s;
+    public function setStatus($status){
+        $this->status = $status;
     }
 
 
