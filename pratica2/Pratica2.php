@@ -11,6 +11,10 @@
 
     $carro1 = new Carro("Ford", "Ka", "Prata");
 
+    $carro1->setMarca("Chevrolet");
+    $carro1->setModelo("Prisma");
+    $carro1->setCor("Branco");
+
     // $carro1->setModelo("Chevrolet"); Prevalece sobre o modelo na linha 12
 
     print_r($carro1);
