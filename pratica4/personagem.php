@@ -12,13 +12,14 @@
         $personagem1 = new Personagem();
             $personagem1->setNome("Liza");
             $personagem1->setClasse("Mago");
+            // $personagem1->dano(1);
 
         $personagem2 = new Personagem();
             $personagem2->setNome("Arthur");
             $personagem2->setClasse("Guerreiro");
 
         print_r($personagem1);
-        print_r($personagem2);
+        // print_r($personagem2);
 
     ?>
 </body>

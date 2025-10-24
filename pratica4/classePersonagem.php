@@ -24,14 +24,18 @@ class Personagem
         
     // }
 
-    public function dano()          // diminui a vida do personagem com base na força (-10% da força(atributo a ser passado))
+    public function dano($d)          // diminui a vida do personagem com base na força (-10% da força(atributo a ser passado))
     {
+        $dano = $d * 0.10 * $this->getForca();
+        $this->setVida($this->getVida() - $dano);
+
+            echo "A {$this->getNome()} perdeu {$dano} de vida.";
 
     }
 
     public function death()        // se vida menor que 0, $vivo = false; 
     {
-
+        
     }
 
     public function descansar()     // se vida < 100, recupera 10 de vida
