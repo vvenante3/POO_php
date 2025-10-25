@@ -12,7 +12,11 @@
         $personagem1 = new Personagem();
             $personagem1->setNome("Liza");
             $personagem1->setClasse("Mago");
-            // $personagem1->dano(1);
+            $personagem1->dano(10);
+            // $personagem1->descansar();
+                $personagem1->subirNivel();
+                $personagem1->subirNivel(); // nível 2
+
 
         $personagem2 = new Personagem();
             $personagem2->setNome("Arthur");

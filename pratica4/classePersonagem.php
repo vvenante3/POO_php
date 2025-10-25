@@ -30,12 +30,16 @@ class Personagem
         $this->setVida($this->getVida() - $dano);
 
             echo "A {$this->getNome()} perdeu {$dano} de vida.";
+                $this->death();
 
     }
 
     public function death()        // se vida menor que 0, $vivo = false; 
     {
-        
+        if($this->getVida() <= 0){
+            $this->setVivo(false);
+                echo "<br> {$this->getNome()} morreu.";
+        }
     }
 
     public function descansar()     // se vida < 100, recupera 10 de vida
