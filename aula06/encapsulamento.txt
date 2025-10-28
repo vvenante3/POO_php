@@ -1,0 +1,64 @@
+Linguagem Orientada a Objeto (POO)
+
+EHP -> E: Encapsulamento
+    -> H: Herança
+    -> P: Polimorfismo
+
+
+E: Encapsulamento
+    Definição: Ocultar partes independentes da implementação, permitindo construir partes invisíveis ao mundo exterior.
+
+        ->  Software encapsulado tem o mesmo padrão. Protege o usuário(programador) do código e o código do usuário
+
+        -> Um bom objeto encapsulado, possui interface bem definida. Interface: Lista de serviço.
+
+        -> Não é obrigatório, porém deixam as classes mais eficientes.
+            1 -> Tornar mudanças invisíveis;
+            2 -> Facilitar a reutilização de códigos;
+            3 -> Reduzir efeitos colaterais.
+
+
+
+    A interface não possui atributos, somente métodos!
+
+        << interface >> 
+    |      Controlador    |
+    -----------------------
+    | + ligar()           |
+    | + desligar()        |
+    | + abrirMenu()       |   MÉTODOS
+    | + fecharMenu()      |   ABSTRATOS (não desenv. na interface)
+    | + maisVolume()      |
+    | + menosVolume()     |
+    | + ligarMudo()       |   
+    | + desligarMudo()    |   Interface a mesma / implementação diferente
+    | + play()            |
+    | + pause()           |
+    -----------------------
+
+            Classe
+    |   ControleRemoto     |    Quando se está trabalhando com encapsulamento, todos os atributos precisam ser Privados ou Protegidos, mas nunca Públicos
+    -----------------------
+    | - Volume             |
+    | - Ligado             |
+    | - Tocando            |
+    |----------------------|
+    | + ligar()            |
+    | + desligar()         |
+    | + abrirMenu()        |
+    | + fecharMenu()       |
+    | + maisVolume()       |
+    | + menosVolume()      |
+    | + ligarMudo()        |
+    | + desligarMudo()     |
+    | + play()             |
+    | + pause()            |
+    |                      |
+    |//métodos especiais   |
+    | - setVolume()        |
+    | - getVolume()        |
+    | - setLigado()        |    //métodos internos: Recomenda-se que sempre sejam "Públicos". Estes Privados apenas por aprendizado
+    | - getDesligado()     |
+    | - setTocando()       |
+    | - getTocando()       |
+    ------------------------
