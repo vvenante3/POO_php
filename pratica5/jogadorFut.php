@@ -7,8 +7,13 @@
 </head>
 <body>
     <?php
-        require_once 'jogadorFut.php';
+        require_once 'classeJogadorFut.php';
 
+        $jogador1 = new JogadorFut("Fortaleza", "Atacante", 10, true);
+            $jogador1->correr();
+            $jogador1->marcar();
+
+            // var_dump($jogador1);
 
     ?>
 </body>
