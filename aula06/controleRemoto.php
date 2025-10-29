@@ -7,8 +7,12 @@
 </head>
 <body>
     <?php    
+        require_once 'classeControlador.php';
 
-        
+        $c = new ControleRemoto();
+        $c->ligar();
+        $c->maisVolume();
+        $c->abrirMenu();
 
     ?>
 </body>
