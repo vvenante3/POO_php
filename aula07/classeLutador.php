@@ -2,19 +2,27 @@
 
 class Lutador{
 
-    private $nome;
-    private $nacionalidade;
-    private $idade;
-    private $altura;
-    private $peso;
-    private $categoria;
-    private $vitorias;
-    private $derrotas;
-    private $empates;
+    private string  $nome;
+    private string  $nacionalidade;
+    private int     $idade;
+    private float   $altura;
+    private float   $peso;
+    private string  $categoria;
+    private int     $vitorias;
+    private int     $derrotas;
+    private int     $empates;
 
-    public function __construct()
+    public function __construct($nome, $nacionalidade, $idade, $altura, $peso, $categoria, $vitorias, $derrotas, $empates)
     {
-        
+        $this->nome             = $nome;
+        $this->nacionalidade    = $nacionalidade;
+        $this->idade            = $idade;
+        $this->altura           = $altura;
+        $this->peso             = $peso;
+        $this->categoria        = $categoria;
+        $this->vitorias         = $vitorias;
+        $this->derrotas         = $derrotas;
+        $this->empates          = $empates;
     }
 
     public function apresentar() {
