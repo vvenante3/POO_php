@@ -2,8 +2,8 @@
 
 class Luta{
 
-    private string  $desafiado;
-    private string  $desafiante;
+    private Lutador $desafiado;     // tipo abstrato
+    private Lutador $desafiante;
     private int     $rounds;
     private bool    $aprovada;
 
@@ -15,7 +15,18 @@ class Luta{
         $this->aprovada     = $aprovada;
     }
 
-    // Métodos
+    /*
+        - Regras da Luta -
+
+    1. Só pode ser marcada entre lutadores da mesma categoria;
+    2. Desafiado e desafiante devem ser lutadores diferentes;
+    3. Só pode acontecer se estiver aprovada;
+    4. Só pode ter como resultado a vitória de um dos lutadores ou empate.
+
+    
+    */
+
+    // Métodos Principais
     public function marcarLuta() {
 
     }

@@ -25,6 +25,8 @@ class Lutador{
         $this->empates          = $empates;
     }
 
+    // Métodos Principais
+
     public function apresentar() {
         echo "<br> O Lutador de agora é: {$this->getNome()},";
         echo " direto de {$this->getNacionalidade()}.</br>";
