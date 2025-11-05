@@ -18,7 +18,7 @@ class Lutador{
         $this->nacionalidade    = $nacionalidade;
         $this->idade            = $idade;
         $this->altura           = $altura;
-        $this->peso             = $peso;
+        $this->setPeso($peso);
         $this->categoria        = $categoria;
         $this->vitorias         = $vitorias;
         $this->derrotas         = $derrotas;
@@ -30,17 +30,19 @@ class Lutador{
         echo " direto de {$this->getNacionalidade()}.</br>";
         echo "<br> Com seus {$this->getIdade()} anos de idade, ";
         echo "e com {$this->getAltura()} de altura, ";
-        echo "pesando exatamente {$this->getPeso()} kg.</br>";
+        echo "pesando exatamente {$this->getPeso()} kg ";
+        echo "da categoria {$this->getCategoria()}</br>";
         echo "<br> Atualmente, ele está com {$this->getVitorias()} Vitórias, ";
         echo "{$this->getDerrotas()} Derrotas e ";
         echo "{$this->getEmpates()} Empates.</br>";
     }
     public function status() {
-        echo "<br>{$this->getNome()}</br>";
-        echo "<br>{$this->getPeso()}</br>";
-        echo "<br>{$this->getVitorias()}</br>";
-        echo "<br>{$this->getDerrotas()}</br>";
-        echo "<br>{$this->getEmpates()}</br>";
+        echo "<-------------LUTADOR------------->";
+        echo "<br>Nome:         {$this->getNome()}</br>";
+        echo "<br>Categoria:    {$this->getCategoria()}</br>";
+        echo "<br>Qtd Vitórias: {$this->getVitorias()}</br>";
+        echo "<br>Qtd Derrotas: {$this->getDerrotas()}</br>";
+        echo "<br>Qtd Empates:  {$this->getEmpates()}</br>";
     }
     public function ganharLuta() {
         $this->setVitorias($this->getVitorias() + 1);
@@ -95,18 +97,19 @@ class Lutador{
     }
     public function setPeso($peso) {
         $this->peso = $peso;
+        $this->setCategoria();
     }
-    public function setCategoria($categoria) {
-        if($this->getCategoria() < 52.2){
-            $this->setCategoria($this->getCategoria("Inválido Magrelo"));
-        } else if ($this->getCategoria() <= 70.3){
-            $this->setCategoria($this->getCategoria("Leve"));
-        } else if ($this->getCategoria() <= 83.9){
-            $this->setCategoria($this->getCategoria("Medio"));
-        } else if ($this->getCategoria() <= 120.2){
-            $this->setCategoria($this->getCategoria("Pesado"));
+    private function setCategoria() {
+        if($this->peso < 52.2){
+            $this->categoria = "Inválido Raquitico";
+        } else if($this->peso <= 70.3) {
+            $this->categoria = "Leve";
+        } else if($this->peso <= 83.9) {
+            $this->categoria = "Médio";
+        } else if($this->peso <= 120.2) {
+            $this->categoria = "Pesado";
         } else {
-            $this->setCategoria($this->getCategoria("Inválido Gordão"));
+            $this->categoria = "Inválido Gordao";
         }
     }
     public function setVitorias($vitorias) {
