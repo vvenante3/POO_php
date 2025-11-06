@@ -8,6 +8,7 @@
 <body>
     <?php
         require_once 'classeLutador.php';
+        require_once 'classeLuta.php';
 
         // $lutador1 = new Lutador("Pretty Boy", "França", 31, 1.75, 68.9, "Leve", 11, 2, 1);
         // $lutador2 = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, "Leve", 14, 2, 3);
@@ -26,8 +27,14 @@
         $l[4] = new Lutador("Ufocobol", "Brasil", 37, 1.70, 119.3, "Pesado", 5, 4, 3);
         $l[5] = new Lutador("Nerdaard", "EUA", 30, 1.81, 105.7, "Pesado", 12, 2, 4);
         
-        $l[3]->perderLuta();
-        $l[3]->apresentar();
+        // $l[3]->perderLuta();
+        // $l[3]->apresentar();
+
+        $UEC01 = new Luta();
+        $UEC01->marcarLuta($l[1], $l[2]);
+        $UEC01->Lutar();
+        // $l[0]->status();
+        // $l[1]->status();
 
     ?>
 </body>
