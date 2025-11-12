@@ -9,7 +9,11 @@
     <?php
         require_once 'classeCarro.php';
         
-        
+        $carro1 = new Carro(false, false, 300);
+        $carro1->desligar();
+        $carro1->frear();
+
+        var_dump($carro1);
 
 
     ?>

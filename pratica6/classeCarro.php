@@ -8,11 +8,11 @@ class Carro implements interfaceCarro{
     private     int     $potencia;
     private     string  $categoria;
 
-    public function __construct($ligado, $desligado, $categoria)
+    public function __construct($ligado, $desligado, $potencia)
     {
         $this->ligado       = false;
         $this->desligado    = false;
-        $this->setCategoria($categoria);
+        $this->setPotencia($potencia);
     }
     // métodos principais
     public function ligar()
@@ -20,31 +20,33 @@ class Carro implements interfaceCarro{
         if($this->getLigado() === true){
             echo "Já está ligado";
         } else {
-            $this->setLigado($this->getLigado(true));
+            $this->setLigado(true);
+            echo "carro ligado Vrum Vrum";
         }
     }
     public function desligar()
     {
         if($this->getDesligado() === true){
-            echo "Já está desligado";
+            echo "<p>Já está desligado</p>";
         } else {
-            $this->setDesligado($this->getDesligado(true));
+            $this->setDesligado(true);
+            echo "<p>Carro desligado</p>";
         }
     }
     public function acelerar()
     {
         if($this->getLigado() === true){
-            echo "Acelerando...";
+            echo "<p>Acelerando...</p>";
         } else {
-            echo "Necessário ligar o carro";
+            echo "<p>Necessário ligar o carro</p>";
         }
     }
     public function frear()
     {
         if($this->getLigado() === true){
-            echo "Freando...";
+            echo "<p>Freando...</p>";
         } else {
-            echo "Carro desligado e parado. É necessário estar ligado";
+            echo "<p>Carro desligado e parado. É necessário estar ligado</p>";
         }
     }
 
