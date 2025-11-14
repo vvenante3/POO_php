@@ -14,7 +14,7 @@ class Pessoa{
     // métodos principais
     public function fazerNiver()
     {
-
+        $this->idade ++;
     }
 
     // métodos especiais

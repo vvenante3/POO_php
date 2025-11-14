@@ -1,7 +1,6 @@
 <?php 
 
-require_once 'classeLivro.php';
-
+require_once 'classePessoa.php';
 class Livro implements Publicacao {
 
     private string  $titulo;
@@ -11,9 +10,12 @@ class Livro implements Publicacao {
     private bool    $aberto;
     private ?Pessoa $leitor = null;
 
-    public function __construct()
+    public function __construct($titulo, $autor, $totPaginas, $leitor)
     {
-            
+        $this->titulo       = $titulo;
+        $this->autor        = $autor;
+        $this->totPaginas   = $totPaginas;
+        $this->leitor       = $leitor;
     }
 
     // Métodos da classePublicacao
@@ -31,11 +33,11 @@ class Livro implements Publicacao {
     }
     public function avancarPag()
     {
-            
+        $this->pagAtual ++;
     }
     public function voltarPag()
     {
-
+        $this->pagAtual --;
     }
     
     // Métodos principais
