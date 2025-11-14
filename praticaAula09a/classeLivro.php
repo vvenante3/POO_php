@@ -1,6 +1,7 @@
 <?php 
 
 require_once 'classePessoa.php';
+require_once 'interfacePublicacao.php';
 class Livro implements Publicacao {
 
     private string  $titulo;
@@ -21,15 +22,19 @@ class Livro implements Publicacao {
     // Métodos da classePublicacao
     public function abrir()
     {
-
+        $this->aberto = true;
     }
     public function fechar()
     {
-
+        $this->aberto = false;
     }
-    public function folhear()
+    public function folhear($p)
     {
-            
+        if($p > $this->totPaginas){
+            $this->pagAtual = 0;
+        } else {
+            $this->pagAtual = $p;
+        }
     }
     public function avancarPag()
     {
