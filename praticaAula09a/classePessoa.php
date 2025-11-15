@@ -2,13 +2,15 @@
 
 class Pessoa{
 
-    private string $nome;
-    private int    $idade;
-    private bool   $sexo;
+    private $nome;
+    private $idade;
+    private $sexo;
 
-    public function __construct()
+    public function __construct($nome, $idade, $sexo)
         {
-            
+           $this->nome  = $nome;
+           $this->idade = $idade;
+           $this->sexo  = $sexo;
         }
 
     // métodos principais

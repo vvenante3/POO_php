@@ -4,18 +4,20 @@ require_once 'classePessoa.php';
 require_once 'interfacePublicacao.php';
 class Livro implements Publicacao {
 
-    private string  $titulo;
-    private string  $autor;
-    private int     $totPaginas;
-    private int     $pagAtual;
-    private bool    $aberto;
-    private ?Pessoa $leitor = null;
+    private         $titulo;
+    private         $autor;
+    private         $totPaginas;
+    private         $pagAtual;
+    private         $aberto;
+    private         $leitor;
 
     public function __construct($titulo, $autor, $totPaginas, $leitor)
     {
         $this->titulo       = $titulo;
         $this->autor        = $autor;
         $this->totPaginas   = $totPaginas;
+        $this->aberto       = false;
+        $this->pagAtual     = 0;
         $this->leitor       = $leitor;
     }
 
@@ -28,7 +30,7 @@ class Livro implements Publicacao {
     {
         $this->aberto = false;
     }
-    public function folhear($p)
+    public function folhear($p) // Tratar este
     {
         if($p > $this->totPaginas){
             $this->pagAtual = 0;
@@ -38,17 +40,27 @@ class Livro implements Publicacao {
     }
     public function avancarPag()
     {
-        $this->pagAtual ++;
+        if ($this->getPagAtual() < $this->getTotPaginas()){
+            $this->pagAtual ++;
+        } else {
+            echo "<p>Você não pode mais avançar Páginas</p>";
+        }
     }
     public function voltarPag()
     {
-        $this->pagAtual --;
+        if ($this->getPagAtual() > 1){
+            $this->pagAtual --;
+        } else {
+            echo "<p>Você não pode mais retroceder!</p>";
+        }
     }
     
     // Métodos principais
     public function detalhes()
     {
-
+        echo "Livro:{$this->titulo}. escrito por:{$this->autor}. ";
+        echo "<br> Páginas:{$this->totPaginas}. Atual:{$this->pagAtual}";
+        echo "<br> Sendo lido por: {$this->leitor->getNome()}";
     }
 
     // Métodos especiais
