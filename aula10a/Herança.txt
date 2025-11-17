@@ -1,0 +1,9 @@
+Herança
+
+A classe Filho herda TODAS as características e comportamentos da classe Pai. Exetendento novas características;
+
+Class Filho extends Pai
+{
+    ...
+}
+
