@@ -20,7 +20,7 @@
         $p1->setNome("Pedro");
         $p2->setNome("Maria");
         $p3->setNome("Claúdio");
-        $p3->setNome("Fabiana");
+        $p4->setNome("Fabiana");
 
 
         var_dump($p1);
