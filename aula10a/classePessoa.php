@@ -7,6 +7,12 @@ class Pessoa
     private $idade;
     private $sexo;
 
+    // Método Construtor
+    public function __construct()
+    {
+
+    }
+
     // Métodos Principais
     public function fazerNiver()
     {

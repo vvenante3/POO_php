@@ -7,11 +7,9 @@ class Professor extends Pessoa
     private $salario;
 
 
-    public function __construct($nome, $idade, $sexo)
+    public function __construct()
     {
-        $this->$nome = $nome = null;
-        $this->$idade = $idade = null;
-        $this->$sexo = $sexo = null;
+        
     }
 
     // Métodos Principais
