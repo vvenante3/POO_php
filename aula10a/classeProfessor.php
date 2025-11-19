@@ -6,6 +6,14 @@ class Professor extends Pessoa
     private $especialidade;
     private $salario;
 
+
+    public function __construct($nome, $idade, $sexo)
+    {
+        $this->$nome = $nome = null;
+        $this->$idade = $idade = null;
+        $this->$sexo = $sexo = null;
+    }
+
     // Métodos Principais
     public function ReceberAum($aum)
     {
