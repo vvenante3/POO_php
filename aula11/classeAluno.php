@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Pessoa.php';
+require_once 'classePessoa.php';
 
 class Aluno extends Pessoa
 {
@@ -23,7 +23,7 @@ class Aluno extends Pessoa
     public function setMatricula($matricula){
         $this->matricula = $matricula;
     }
-    public function setCuros($curso)
+    public function setCurso($curso)
     {
         $this->curso = $curso;
     }

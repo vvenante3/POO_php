@@ -7,9 +7,16 @@
 </head>
 <body>
     <?php
-        require_once 'classePessoa.php';
+        require_once 'classeAluno.php';
 
-        
+        $a1 = new Aluno();
+        $a1->setNome("Pedro");
+        $a1->setMatricula(111111);
+        $a1->setIdade(16);
+        $a1->setSexo("m");
+        $a1->setCurso("Informática");
+
+        var_dump($a1);
 
     ?>
 </body>
