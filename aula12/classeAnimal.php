@@ -12,18 +12,9 @@ abstract class Animal
     }
 
     // Métodos Principais
-    public function locomover()
-    {
-
-    }
-    public function alimentar()
-    {
-
-    }
-    public function emitirSom()
-    {
-
-    }
+    abstract public function locomover();
+    abstract public function alimentar();
+    abstract public function emitirSom();
 
     // Métodos Especiais
     public function getPeso()

@@ -1,6 +1,5 @@
 <?php
 
-require_once 'classeAnimal.php';
 require_once 'classeMamifero.php';
 
 class Canguru extends Mamifero
