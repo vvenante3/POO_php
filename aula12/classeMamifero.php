@@ -9,7 +9,7 @@ class Mamifero extends Animal
     // Método Sobrepor
     public function locomover()
     {
-        echo "Correndo";
+        echo "<p>Correndo</p>";
     }
     public function alimentar()
     {
@@ -17,7 +17,7 @@ class Mamifero extends Animal
     }
     public function emitirSom()
     {
-        echo "Som de Mamífero";
+        echo "<p>Som de Mamífero</p>";
     }
 
     // Métodos Especiais

@@ -19,6 +19,22 @@
         require_once 'classeGoldfish.php';
         require_once 'classeTartaruga.php';
         
+        $m = new Mamifero();
+        $a = new Ave();
+        $r = new Reptil();
+        $c = new Canguru();
+        $k = new Cachorro();
+        $t = new Tartaruga();
+
+        // $m->locomover();
+        // $c->locomover();
+        // $k->locomover();
+        // $t->locomover();
+
+        $m->emitirSom();
+        $k->emitirSom();
+
+
 
     ?>
 </body>
