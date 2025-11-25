@@ -1,0 +1,9 @@
+<?php
+
+require_once 'classeAnimal.php';
+require_once 'classeReptil.php';
+
+class Goldfish extends Peixe
+{
+    
+}
