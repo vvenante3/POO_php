@@ -1,0 +1,8 @@
+Poli    = Muitas
+Morfo   = Formas
+
+-> Permite que um mesmo nome, represente vários comportamentos diferentes.
+
+2 tipos de Polimorfismo mais utilizados:
+    - Sobreposição
+    - Sobrecarga
