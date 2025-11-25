@@ -6,6 +6,11 @@ abstract class Animal
     private $idade;
     private $membros;
 
+    public function __construct()
+    {
+        
+    }
+
     // Métodos Principais
     public function locomover()
     {
