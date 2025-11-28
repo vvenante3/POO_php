@@ -24,20 +24,20 @@ class Gafanhoto extends Pessoa
     // Métodos Especiais
     public function getLogin()
     {
-
+        return $this->login;
     }
     public function getTotAssistido()
     {
-
+        return $this->totAssistido;
     }
 
-    public function setLogin()
+    public function setLogin($login)
     {
-
+        $this->login = $login;
     }
-    public function setTotAssistido()
+    public function setTotAssistido($totAssistido)
     {
-
+        $this->totAssistido = $totAssistido;
     }
 
 }
